@@ -65,8 +65,20 @@ Example:
 - How IAM Access Keys are used for AWS CLI
 - How to upload files to S3 using AWS CLI
 
-
 ## Future improvements
 - Add CloudWatch monitoring and alarms
 - Automate uploads using cron
 - Apply least privilege IAM policy for S3 access
+
+## Alarm Test
+
+I simulated high CPU usage on the EC2 instance and verified that the CloudWatch alarm was triggered successfully.
+
+### Result
+- CPU utilization exceeded 70%
+- Alarm state changed from OK to ALARM
+- Notification email was received via SNS
+
+### Test Method
+- Generated CPU load using `yes > /dev/null`
+- Ran multiple processes to exceed CPU threshold
