@@ -1,6 +1,3 @@
-# aws-ec2-s3-log-upload
-Hands-on AWS project: EC2 SSH + Python log analysis + S3 upload
-
 # AWS EC2 → S3 Log Upload Lab
 
 ## Overview
@@ -30,7 +27,44 @@ Local PC (WSL) → SSH → EC2 (Ubuntu) → S3
 ### 2. SSH connection
 ```bash
 ssh -i ~/keys/log-analysis-key.pem ubuntu@<PublicIPv4>
+```
 
 ### 3. Install Python
+```bash
 sudo apt update
 sudo apt install python3 python3-pip -y
+```
+
+### 4. Install AWS CLI v2
+```bash
+curl ""https://awscli.amaxonaws.com/aswcli-exe-linux-x86_64.xip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+```
+
+### 5. Configure AWS CLI
+```bash
+aws configure
+```
+
+### 6. Upload files to S3
+```bash
+aws s3 cp log.txt s3://bucket-2026/
+aws s3 cp result.txt s3://bucket-2026/
+aws s3 ls s3://bucket-2026/
+```
+
+## Sample Output
+Example:192.168.1.20 2
+
+## What I learned
+- Difference between Stop and Terminate in EC
+- How Security Groups control SSH access
+- How IAM Access Keys are used for AWS CLI
+- How to upload files to S3 using AWS CLI
+
+## Future improvements
+- Add CloudWatch monitoring and alarms
+- Automate uploads using cron
+- apply least privilege IAM policy for S3 access
