@@ -64,9 +64,7 @@ Example:
 - How Security Groups control SSH access
 - How IAM Access Keys are used for AWS CLI
 - How to upload files to S3 using AWS CLI
-- Secured the AWS root account by enabling MFA and using IAM users for daily operations
-- Understood how Security Group inbound rules control SSH access (port 22)
-- Successfully configured AWS CLI and uploaded files from EC2 to S3
+
 
 ## Future improvements
 - Add CloudWatch monitoring and alarms
