@@ -30,3 +30,7 @@ Local PC (WSL) → SSH → EC2 (Ubuntu) → S3
 ### 2. SSH connection
 ```bash
 ssh -i ~/keys/log-analysis-key.pem ubuntu@<PublicIPv4>
+
+### 3. Install Python
+sudo apt update
+sudo apt install python3 python3-pip -y
