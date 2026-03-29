@@ -37,7 +37,7 @@ sudo apt install python3 python3-pip -y
 
 ### 4. Install AWS CLI v2
 ```bash
-curl ""https://awscli.amaxonaws.com/aswcli-exe-linux-x86_64.xip" -o "awscliv2.zip"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
@@ -56,10 +56,11 @@ aws s3 ls s3://bucket-2026/
 ```
 
 ## Sample Output
-Example:192.168.1.20 2
+Example:
+192.168.1.20 2
 
 ## What I learned
-- Difference between Stop and Terminate in EC
+- Difference between Stop and Terminate in EC2
 - How Security Groups control SSH access
 - How IAM Access Keys are used for AWS CLI
 - How to upload files to S3 using AWS CLI
@@ -67,4 +68,4 @@ Example:192.168.1.20 2
 ## Future improvements
 - Add CloudWatch monitoring and alarms
 - Automate uploads using cron
-- apply least privilege IAM policy for S3 access
+- Apply least privilege IAM policy for S3 access
